@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api")
 public class CalculatorController {
 
-    @GetMapping("/sum")
+    GetMapping("/sum")
     public int sum(@RequestParam int a, @RequestParam int b) {
-        return a + b;
+        return a * b; // BUG: debería ser a + b
     }
 
     @GetMapping("/multiply")
